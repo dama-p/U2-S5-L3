@@ -1,0 +1,129 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #612609;
+}
+
+/* CARD */
+
+.card {
+  width: 300px;
+  background-color: #fbf7e3;
+  text-align: center;
+  border-radius: 20%;
+  padding-bottom: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+}
+
+.card img {
+  object-fit: cover;
+  height: 15rem;
+}
+
+.cardtext {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.productName {
+  line-height: 0.2rem;
+}
+
+.add {
+  background-color: #f3df85;
+  border: none;
+  padding: 0.6rem;
+  width: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #612609;
+  border-radius: 5em;
+  font-size: 18px;
+}
+
+/* NAV BAR */
+
+.navContainer {
+  width: 60%;
+  justify-content: center;
+  margin-inline: auto;
+  background-color: #fbf7e3;
+  padding: 2em;
+  border-radius: 5em;
+}
+
+.nav {
+  display: flex;
+  gap: 1.8em;
+}
+
+.nav .add {
+  padding-block: 1rem;
+}
+
+.nav img {
+  width: 1.5em;
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+
+.nav button:nth-of-type(3) {
+  font-weight: 600;
+  margin-block: -1rem;
+  word-spacing: 0.8em;
+  font-size: 24px;
+}
+
+/* ARTICLE FOR DESKTOP */
+
+.container {
+  width: 90%;
+  margin-inline: auto;
+  background-color: #fbf7e3;
+  padding: 2em;
+  border-radius: 2em;
+  display: flex;
+  gap: 1.5em;
+}
+
+.postText {
+  line-height: 1.6rem;
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+.container img {
+  flex-shrink: 0;
+  flex-grow: 0;
+  align-self: center;
+  width: 40%;
+}
+
+/* ARTICLE FOR MOBILE */
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .postText {
+    order: 0;
+  }
+
+  .container img {
+    order: 1;
+    width: 100%;
+  }
+}
